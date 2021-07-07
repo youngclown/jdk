@@ -2941,6 +2941,7 @@ G1CollectedHeap::G1HeapPrinterMark::~G1HeapPrinterMark() {
   _g1h->policy()->print_age_table();
   _g1h->rem_set()->print_coarsen_stats();
 
+  _heap_transition.print();
   _g1h->print_heap_regions();
   _g1h->print_heap_after_gc();
   // We are at the end of the GC. Total collections has already been increased.
